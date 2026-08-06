@@ -12,7 +12,7 @@ A high-quality collection of Bitcoin addresses split into multiple **24 MB chunk
 | One address per line | ✅ |
 | Chunk Size | Maximum 24 MB |
 | Total Addresses | **56,701,876** |
-| Chunk Naming | `btc_addresses1.txt`, `btc_addresses2.txt`, `btc_addresses3.txt`, ... |
+| Chunk Naming | `btc_addresses001.txt`, `btc_addresses002.txt`, `btc_addresses003.txt`, ... |
 
 ---
 
@@ -95,9 +95,9 @@ print("Output:", OUTPUT_FILE.resolve())
 Repository
 │
 ├── btc addresses
-│   ├── btc_addresses1.txt
-│   ├── btc_addresses2.txt
-│   ├── btc_addresses3.txt
+│   ├── btc_addresses001.txt
+│   ├── btc_addresses002.txt
+│   ├── btc_addresses003.txt
 │   └── ...
 │
 └── merge_chunks.py
