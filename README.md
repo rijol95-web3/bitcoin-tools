@@ -145,11 +145,32 @@ Displayed information:
 - Dataset Statistics
 - Last Update Time
 
-Price sources:
+## 💹 Price Sources
 
-- CoinGecko
-- Coinbase
-- Kraken
+<p align="center">
+
+<a href="https://www.coingecko.com/" target="_blank">
+<img src="https://cdn.simpleicons.org/coingecko/8DC63F" width="48" alt="CoinGecko"><br>
+<b>CoinGecko</b>
+</a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="https://www.coinbase.com/" target="_blank">
+<img src="https://cdn.simpleicons.org/coinbase/0052FF" width="48" alt="Coinbase"><br>
+<b>Coinbase</b>
+</a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="https://www.kraken.com/" target="_blank">
+<img src="https://cdn.simpleicons.org/kraken/5741D9" width="48" alt="Kraken"><br>
+<b>Kraken</b>
+</a>
+
+</p>
+
+The live BTC price shown in the repository banner is aggregated from multiple free public market data providers to improve reliability and provide fallback if one provider is temporarily unavailable.
 
 Workflow:
 
