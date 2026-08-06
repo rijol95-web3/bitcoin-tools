@@ -1,0 +1,62 @@
+name: Update Bitcoin Price Banner
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    # Runs every 15 minutes. GitHub Actions schedules use UTC.
+    - cron: "*/15 * * * *"
+
+  push:
+    paths:
+      - "scripts/generate_banner.py"
+      - "requirements-banner.txt"
+      - ".github/workflows/update-bitcoin-banner.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bitcoin-price-banner
+  cancel-in-progress: true
+
+jobs:
+  update-banner:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: requirements-banner.txt
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements-banner.txt
+
+      - name: Generate live Bitcoin banner
+        run: python scripts/generate_banner.py
+
+      - name: Commit banner update
+        shell: bash
+        run: |
+          if git diff --quiet -- assets/bitcoin-stats.svg assets/bitcoin-market-cache.json; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add assets/bitcoin-stats.svg assets/bitcoin-market-cache.json
+          git commit -m "Update live BTC price banner"
+
+          git pull --rebase origin main
+          git push origin HEAD:main
