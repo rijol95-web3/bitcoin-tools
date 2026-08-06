@@ -220,5 +220,5 @@ See the LICENSE file for licensing information.
 ---
 
 <p align="center">
-Made for the Bitcoin open-source community.
+❤️ Made with <b>RiJoL95</b> for the Bitcoin open-source community.
 </p>
