@@ -1,73 +1,81 @@
 
 # Bitcoin Address Dataset
 
-> **Professional README template** for the Bitcoin Address Dataset repository.
-
-<!-- Banner -->
 <p align="center">
-  <img src="assets/bitcoin-stats.svg" width="1000" alt="Bitcoin Dataset Banner">
+  <img src="assets/bitcoin-stats.svg" width="1000" alt="Bitcoin Address Dataset">
+</p>
+
+<h1 align="center">Bitcoin Address Dataset</h1>
+
+<p align="center">
+A curated collection of <b>56,701,876 Bitcoin addresses</b> distributed across <b>94 optimized chunks</b> for blockchain analysis, research, indexing, and large-scale processing.
 </p>
 
 <p align="center">
-  <a href="https://github.com/rijol95-web3/bitcoin-tools/actions/workflows/update-bitcoin-banner.yml">
-    <img src="https://github.com/rijol95-web3/bitcoin-tools/actions/workflows/update-bitcoin-banner.yml/badge.svg" alt="Live Banner">
-  </a>
-  <img src="https://img.shields.io/github/license/rijol95-web3/bitcoin-tools">
-  <img src="https://img.shields.io/github/stars/rijol95-web3/bitcoin-tools">
-  <img src="https://img.shields.io/github/forks/rijol95-web3/bitcoin-tools">
-  <img src="https://img.shields.io/github/repo-size/rijol95-web3/bitcoin-tools">
-  <img src="https://img.shields.io/github/last-commit/rijol95-web3/bitcoin-tools">
-</p>
 
-A curated dataset containing **56,701,876 Bitcoin addresses**, distributed as **94 optimized 24 MiB chunks** for blockchain research, indexing, analytics, and balance scanning.
+![License](https://img.shields.io/github/license/rijol95-web3/bitcoin-tools)
+![Repo Size](https://img.shields.io/github/repo-size/rijol95-web3/bitcoin-tools)
+![Last Commit](https://img.shields.io/github/last-commit/rijol95-web3/bitcoin-tools)
+![Stars](https://img.shields.io/github/stars/rijol95-web3/bitcoin-tools)
+![Forks](https://img.shields.io/github/forks/rijol95-web3/bitcoin-tools)
+
+</p>
 
 ---
 
 # Features
 
 - 56,701,876 Bitcoin addresses
-- 94 optimized chunks
+- Bitcoin Mainnet
+- UTF-8 plain text
 - One address per line
-- UTF-8 text format
-- Merge utility
+- 94 optimized chunk files
+- Maximum chunk size: 24 MiB
 - Windows balance checker
+- Merge utility
+- Resume interrupted balance scans
 - SQLite progress database
-- Resume interrupted scans
-- GitHub Actions live BTC banner
-- Automatic banner updates
+- Automatic live Bitcoin market banner
 
 ---
 
 # Dataset Information
 
 | Property | Value |
-|---|---:|
+|----------|------:|
 | Network | Bitcoin Mainnet |
-| Addresses | 56,701,876 |
-| Chunks | 94 |
-| Chunk Size | 24 MiB |
+| Total Addresses | **56,701,876** |
+| Chunks | **94** |
+| Maximum Chunk Size | **24 MiB** |
 | Format | TXT |
 | Encoding | UTF-8 |
+| One Address Per Line | ✅ |
 
 ---
 
-# Repository Layout
+# Repository Structure
 
 ```text
 bitcoin-tools/
 │
-├── btc addresses/
 ├── assets/
-├── scripts/
-├── .github/workflows/
-├── btc-balance-checker.exe
+│   ├── bitcoin-stats.svg
+│   ├── coinbase.svg
+│   └── coingecko.svg
+│
+├── btc addresses/
+│   ├── btc_addresses001.txt
+│   ├── btc_addresses002.txt
+│   ├── ...
+│
 ├── merge_chunks.py
+├── btc-balance-checker.exe
 └── README.md
 ```
 
 ---
 
-# Clone
+# Clone Repository
 
 ```bash
 git clone https://github.com/rijol95-web3/bitcoin-tools.git
@@ -77,6 +85,8 @@ cd bitcoin-tools
 ---
 
 # Merge Dataset
+
+Merge every chunk into a single text file.
 
 ```bash
 python merge_chunks.py
@@ -90,7 +100,7 @@ btc_addresses.txt
 
 ---
 
-# Balance Checker
+# Windows Balance Checker
 
 Run:
 
@@ -98,19 +108,17 @@ Run:
 btc-balance-checker.exe
 ```
 
-The application automatically:
+Features:
 
-- Reads all chunk files
+- Reads every dataset chunk
 - Validates Bitcoin addresses
-- Queries multiple public APIs
-- Stores progress in SQLite
-- Can resume after interruption
-- Exports checked results
-- Saves positive balances separately
+- Uses multiple public providers
+- Saves progress automatically
+- Can resume interrupted scans
+- Exports balance results
+- Stores positive balances separately
 
----
-
-# Command Examples
+Example:
 
 ```bat
 btc-balance-checker.exe
@@ -123,108 +131,90 @@ btc-balance-checker.exe --export-only
 btc-balance-checker.exe --help
 ```
 
+Generated files:
+
+```text
+balance_progress.sqlite3
+balance_results.txt
+positive_balances.txt
+balance_errors.txt
+```
+
 ---
 
-# Generated Files
-
-- balance_progress.sqlite3
-- balance_results.txt
-- positive_balances.txt
-- balance_errors.txt
-
----
-
-# Live Bitcoin Banner
-
-The repository includes a GitHub Actions workflow that automatically updates the banner.
-
-Displayed information:
-
-- BTC/USD Price
-- 24-hour Change
-- Dataset Statistics
-- Last Update Time
-
-## 💹 Price Sources
+# Price Sources
 
 <p align="center">
 
-<a href="https://www.coingecko.com/" target="_blank">
-<img src="https://cdn.simpleicons.org/coingecko/8DC63F" width="48" alt="CoinGecko"><br>
+<a href="https://www.coingecko.com">
+<img src="assets/coingecko.svg" width="70" alt="CoinGecko"><br>
 <b>CoinGecko</b>
 </a>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<a href="https://www.coinbase.com/" target="_blank">
-<img src="https://cdn.simpleicons.org/coinbase/0052FF" width="48" alt="Coinbase"><br>
+<a href="https://www.coinbase.com">
+<img src="assets/coinbase.svg" width="70" alt="Coinbase"><br>
 <b>Coinbase</b>
-</a>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-<a href="https://www.kraken.com/" target="_blank">
-<img src="https://cdn.simpleicons.org/kraken/5741D9" width="48" alt="Kraken"><br>
-<b>Kraken</b>
 </a>
 
 </p>
 
-The live BTC price shown in the repository banner is aggregated from multiple free public market data providers to improve reliability and provide fallback if one provider is temporarily unavailable.
+The live Bitcoin price displayed in the repository banner is obtained from multiple public market data providers to improve availability and reliability.
 
-Workflow:
+---
 
-```text
-Actions
-└── Update Bitcoin Price Banner
-```
+# Repository Statistics
 
-Run manually:
-
-```text
-Actions
-→ Update Bitcoin Price Banner
-→ Run workflow
-```
+| Property | Value |
+|-----------|------:|
+| Bitcoin Addresses | **56,701,876** |
+| Dataset Chunks | **94** |
+| Maximum Chunk Size | **24 MiB** |
+| Balance Checker | Windows EXE |
+| Merge Utility | Python |
+| Banner | Live SVG |
 
 ---
 
 # Performance
 
-This repository contains over **56 million** Bitcoin addresses.
+The dataset contains more than **56 million** Bitcoin addresses.
 
-Scanning the entire dataset through public APIs may take a long time because of API rate limits.
+Processing the entire dataset using public APIs may require significant time due to provider rate limits and network latency.
 
-For maximum performance, use a local Bitcoin node.
+For production-scale analysis, a locally synchronized Bitcoin node is recommended.
 
 ---
 
 # Security
 
-The software:
+The provided tools:
 
-- Does NOT request private keys
-- Does NOT request seed phrases
-- Does NOT modify wallets
-- Does NOT sign transactions
-- Only reads public blockchain data
+- Never request private keys
+- Never request seed phrases
+- Never modify wallets
+- Never sign transactions
+- Read only public blockchain information
 
 ---
 
 # Disclaimer
 
-This repository is intended for research, education, blockchain analytics, and software development.
+Bitcoin balances and blockchain data change over time.
 
-Bitcoin balances change over time. Results depend on the selected API provider and the current blockchain state.
+Results depend on the selected public provider and the current blockchain state.
+
+This repository is intended for research, education, blockchain analysis, and software development.
 
 ---
 
 # License
 
-See the LICENSE file.
+See the LICENSE file for licensing information.
 
 ---
 
 <p align="center">
-Made with RiJoL95 ❤️ for the Bitcoin open-source community.
+Made for the Bitcoin open-source community.
 </p>
