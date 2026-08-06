@@ -144,46 +144,26 @@ balance_errors.txt
 
 # Price Sources
 
-<table>
-  <tr>
-    <td align="center" width="50%">
-      <a href="https://www.coingecko.com">
-        <img
-          src="assets/coingecko.svg"
-          alt="CoinGecko"
-          height="64"
-        >
-      </a>
-      <br><br>
-      <a href="https://www.coingecko.com">
-        <strong>CoinGecko</strong>
-      </a>
-      <br>
-      <sub>BTC/USD price and 24-hour market change</sub>
-    </td>
-
-    <td align="center" width="50%">
-      <a href="https://www.coinbase.com">
-        <img
-          src="assets/coinbase.svg"
-          alt="Coinbase"
-          height="64"
-        >
-      </a>
-      <br><br>
-      <a href="https://www.coinbase.com">
-        <strong>Coinbase</strong>
-      </a>
-      <br>
-      <sub>Independent BTC/USD spot-price reference</sub>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://www.coingecko.com">
+    <img src="assets/coingecko.svg" alt="CoinGecko" height="52">
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.coinbase.com">
+    <img src="assets/coinbase.svg" alt="Coinbase" height="52">
+  </a>
+</p>
 
 <p align="center">
-  The live Bitcoin price displayed in the repository banner is aggregated
-  from multiple public market-data providers for better availability,
-  fallback support, and price validation.
+  <a href="https://www.coingecko.com"><b>CoinGecko</b></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.coinbase.com"><b>Coinbase</b></a>
+</p>
+
+<p align="center">
+  The live Bitcoin price displayed in the repository banner is collected
+  from multiple public market-data providers for improved availability,
+  fallback support, and price verification.
 </p>
 
 ---
