@@ -1,10 +1,10 @@
 {
-  "price_usd": 62937.915,
-  "change_24h_percent": -0.09191773257876432,
+  "price_usd": 62936.395,
+  "change_24h_percent": -0.09119441415103235,
   "providers": [
     "CoinGecko",
     "Coinbase",
     "Kraken"
   ],
-  "updated_at": "2026-08-16T10:42:24.728868+00:00"
+  "updated_at": "2026-08-16T10:59:32.541491+00:00"
 }
