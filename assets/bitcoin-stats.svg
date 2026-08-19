@@ -55,7 +55,7 @@
     font-size="16" fill="#94a3b8">BTC / USD</text>
   <text x="312" y="235"
     font-family="Arial, Helvetica, sans-serif"
-    font-size="44" font-weight="700" fill="#f7931a">$64,357.10</text>
+    font-size="44" font-weight="700" fill="#f7931a">$64,429.90</text>
   <text x="674" y="183" text-anchor="end"
     font-family="Arial, Helvetica, sans-serif"
     font-size="15" fill="#94a3b8">24h change</text>
@@ -99,6 +99,6 @@
   <text x="1150" y="343" text-anchor="end"
     font-family="Arial, Helvetica, sans-serif"
     font-size="15" fill="#94a3b8">
-    Updated: 2026-08-19 10:54 UTC
+    Updated: 2026-08-19 11:18 UTC
   </text>
 </svg>
