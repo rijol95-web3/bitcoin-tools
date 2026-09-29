@@ -1,9 +1,9 @@
 {
-  "price_usd": 84041.11249999999,
-  "change_24h_percent": 0.6643686341323729,
+  "price_usd": 83600.41750000001,
+  "change_24h_percent": 0.1624677850105566,
   "providers": [
     "Coinbase",
     "Kraken"
   ],
-  "updated_at": "2026-09-29T14:04:15.145728+00:00"
+  "updated_at": "2026-09-29T19:24:34.160805+00:00"
 }
